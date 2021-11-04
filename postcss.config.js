@@ -5,7 +5,7 @@ module.exports = {
         require("postcss-import"),
         require("tailwindcss")("./tailwind.config.js"),
         require("autoprefixer"),
-        ...(jekyllEnv != "development"
+        ...(jekyllEnv !== "development"
             ? [
                 require("@fullhuman/postcss-purgecss")({
                     content: ["!(_site|node_modules)/**/*.+(html|js|md)", "*.html"],
