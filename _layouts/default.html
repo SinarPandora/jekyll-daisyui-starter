@@ -1,0 +1,18 @@
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+    <title>{{ site.title | escape }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    {% feed_meta %}
+    {% seo %}
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <section>{{ content }}</section>
+
+    {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
+    {% endif %}
+</body>
+</html>
+
